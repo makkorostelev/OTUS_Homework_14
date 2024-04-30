@@ -1,0 +1,29 @@
+ceph_origin: repository
+ceph_repository: community
+ceph_stable_release: quincy
+public_network: "10.5.0.0/24"
+cluster_network: "10.5.0.0/24"
+cluster: ceph
+
+osd_objectstore: bluestore
+osd_scenario: lvm
+devices:
+  - '/dev/vdb'
+
+ntp_service_enabled: true
+ntp_daemon_type: chronyd
+
+dashboard_enabled: True
+dashboard_protocol: http
+dashboard_admin_user: admin
+dashboard_admin_password: p@ssw0rd
+
+grafana_admin_user: admin
+grafana_admin_password: p@ssw0rd
+
+ceph_conf_overrides:
+  global:
+    osd_pool_default_pg_num: 64
+    osd_journal_size: 5120
+    osd_pool_default_size: 3
+    osd_pool_default_min_size:  2

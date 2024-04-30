@@ -1,0 +1,31 @@
+[mons]
+${ceph_1_instance} monitor_address=${ceph_1_instance}
+${ceph_2_instance} monitor_address=${ceph_1_instance}
+${ceph_3_instance} monitor_address=${ceph_1_instance}
+
+[osds]
+${ceph_1_instance}
+${ceph_2_instance}
+${ceph_3_instance}
+
+[mgrs]
+${ceph_1_instance}
+${ceph_2_instance}
+${ceph_3_instance}
+
+[mdss]
+${ceph_1_instance}
+${ceph_2_instance}
+${ceph_3_instance}
+
+[monitoring]
+${ceph_1_instance}
+${ceph_2_instance}
+${ceph_3_instance}
+
+[all:vars]
+ansible_connection='ssh'
+ansible_ssh_port='22'
+ansible_user='ubuntu'
+ansible_ssh_private_key_file="${private_key_path}"
+ansible_ssh_common_args='-o ProxyCommand="ssh -p 22 -W %h:%p -q ubuntu@${admin_instance} -o StrictHostKeyChecking=no"'
