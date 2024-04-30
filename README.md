@@ -15,6 +15,7 @@ Then enter the commands:\
 After ~15 minutes project will be initialized and run:\
 
 You can log in to any node in the cluster and check its status.\
-`sudo ceph status`
-![Ceph]((https://github.com/makkorostelev/OTUS_Homework_14/blob/main/Screenshots/ceph.png))
+`sudo ceph status`\
+
+![Ceph](https://github.com/makkorostelev/OTUS_Homework_14/blob/main/Screenshots/ceph.png)
 
